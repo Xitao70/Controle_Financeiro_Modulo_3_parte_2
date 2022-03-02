@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/conteudo.css">
+     
+    <title>Controle financeiro</title>
+</head>
+<body>
+    <div class="caixa_mestra" ><!--caixa que envolve o cabecalho-->  
+        <header><!--inicio cabecalho-->
+            <div class="logo" >
+                <img class="img" src="./assets/img/Ellipse 13.png" alt="logomarca">
+            </div>
+            <div class="titulo" >
+                <h1 class="tamanho_titulo" >Controle financeiro</h1>
+            </div>
+            <div class="menu" >
+                <input type="checkbox"  id="check">
+                <label class="triplo_atomico" for="check">
+                    <img  src="./assets/img/menu.png" alt="menu">
+                </label>
+                <nav class="nav_principal">
+                    <input type="checkbox"  id="check">
+                    <label class="xis" for="check" >
+                        <img class="cross" src="./assets/img/cross2.png" alt="cruz">
+                    </label>
+                    <ul class="lista_menu">
+                        <li>
+                            <a id="inicio_cadastro" onclick="foco_nova_mercadoria()">Cadastro de transações</a>
+                        </li>
+                        <div class="separador">|</div>
+                        <li>
+                            <a class="apagador" onclick="limpar_dados()">Limpar dados </a> 
+                        </li>
+                    </ul>
+                </nav>
+            </div>           
+        </header>
+    </div>
+<!--final do cabeçalho-->
+<!--inicio conteúdo-->
+<div class="matrix">
 
+    <div class="conteudo" >
+        <form class="nova_transacao" onsubmit="registraTransacao(event);"> 
+            <!--event é um parâmetro padrão da função onsubmit-->
+            <div class="caixa_nova_transacao" >
+                <h3 class="novatra" >Nova transação</h3>
+            </div>
+            <div class="caixa_tipo_transacao" >
+                <label class="label_tipotransacao" for="transacao_tipo">Tipo de transação</label>
+                <select class="seletor_compra_venda" name="tipo_transacao" id="transacao_tipo">
+                    <option name="seletor_name" type="option" value="false">Compra</option>
+                    <option name="seletor_name" type="option" value="true">Venda</option>
+                </select>
+            </div>
+            <div class="caixa_nome_mercadoria">
+                <label class="merc_nome" for="mercadoria">Nome da mercadoria</label>
+                <input class="merc_insere" name="mercadoria" id="mercadoria" onfocus="this.value='';" placeholder="Input" type="text" required />
+            </div>
+            <div class="caixa_valor" >
+                <label class="preco" for="vlr">Valor</label>
+                <input class="insere_preco" type="text" required name="vlr" id="vlr"  placeholder="R$ 0,00" onkeypress="formata_Mascara(event)">
+            </div>
+            <div class="caixa_btn" >
+                <input class="btn_adc_transacao" type="submit" value="Adicionar Transação"/>
+            </div>
+        </form>
+        <!--fim da caixa nova transação-->
+        <div class="tab_transacao" >
+            <h3 class="extrato" >Extrato transações</h3>
+            <table class="tab_merc" id="tab_merc" style="border-spacing: 0;" >
+                <tr>
+                    <th class="th_positivo_negativo" style="border-bottom: 1px solid #979797;" ></th>  
+                    <th class="th_mercadoria" id="th_mercadoria" style="text-align: left;font-weight: bold; border-bottom: 1px solid #979797;">Mercadoria</th>
+                    <th class="th_valor" style="text-align:end;font-weight: bold;border-bottom: 1px solid #979797;">Valor</th>
+                </tr>  
+                
+            </table>
+            
+            <div class="th_resumoTransacoes" id="th_resumoTransacoes" style="padding: 0;"></div>
+            
+            
+            
+            <table id="tab_merc2" style="border-spacing: 0;" >
+            </tr>
+            <tr >
+                
+                
+                
+            </tr>
+            <tr>
+                 
+
+            </table>
+        </div>
+    
+    </div>
+</div>
+<!--RODAPÉ-->
+<footer class="rodape" >
+</footer>
+<script src="./assets/js/form.js"></script>    
+<script src="./assets/js/script.js"></script>
+<!-- <script>var valor = 9.9 ; var moedaFormatada = valor.toFixed(2); moedaFormatada = 'R$' + moedaFormatada; moedaFormatada = moedaFormatada.replace('.', ','); </script>     -->
+</body>
+</html>
