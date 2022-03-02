@@ -1,0 +1,103 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+     
+    font-family: 'Lato', sans-serif; /*define a fonte que será usada em todo o site*/
+}
+/*======================================================================*/
+/*======== INCÍCIO DA SEÇÃO DO CABEÇALHO E SEUS COMPONENTES ============*/
+/*======================================================================*/
+.caixa_mestra{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(224, 224, 224, 1);
+}
+
+header{
+    display: flex;
+    width: 100%;
+    max-width: 1112px;/*largura máxima do cabecalho*/
+    
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+.logo{ /*caixa que envolve a logomarca*/
+    display: flex;
+    
+}
+
+img{
+    width: 40px;
+}
+.titulo{
+    display: flex; 
+    align-items: center;   
+    width: 100%;  
+}
+
+.tamanho_titulo{
+    font-size: 20px;
+     width: 411px;
+    margin-left: 20px;
+}
+
+.nav_principal{
+   /* display: flex;
+    align-items: center;*/
+    height: 35px;
+    background-color: white;
+    white-space: nowrap; /*texto sem quebra de linha*/
+    padding: 0px 20px;/*espaçamento interno da caixa menu*/
+
+}
+.menu{
+     
+    align-items: center;
+}
+
+ul, li{
+    display: flex;
+    flex-direction: row;
+       
+    align-items: center;
+}
+ 
+ul{
+    display: flex;
+    
+}
+
+.lista_menu li{
+    font-size: 16px;
+    
+}
+a{
+    text-decoration: none; /*remove linha embaixo do link e a cor padrão*/
+    color: #000; /*define a cor para o*/
+}
+.separador{/*linha vertical que faz a separação entre os links do menu_top*/
+    color: #979797;
+    padding: 4px 20px;
+}
+.menu_lateral{
+    display: none;
+}
+.triplo_atomico{
+    display: none; /*oculta menu lateral*/ 
+}
+.xis{
+    display: none; /*oculta o "X" do menu lateral*/
+}
+ #check{
+    display:none; /*oculta a checkbox*/
+}
+
+/*======================================================================*/
+/*==== FIM DA SEÇÃO DO CABEÇALHO E SEUS COMPONENTES ((DESKTOPP)) =======*/
+/*======================================================================*/
+ 

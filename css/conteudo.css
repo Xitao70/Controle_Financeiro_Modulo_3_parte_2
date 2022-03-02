@@ -1,1 +1,430 @@
+/*======================================================================*/
+/*============ SECÇÃO CONTEÚDO / NOVA TRANSAÇÃO =========================*/
+/*======================================================================*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.matrix{
+     display: flex;
+    justify-content: space-around;      
+     width: 100%; 
+}
+.conteudo{
+    display: flex;
+     width: 100%; 
+    max-width: 1112px;
+    justify-content: space-around;
+}
+.nova_transacao{
+    display: flex;
+    width: 40%;
+    max-height: 344px;
+    flex-direction: column;
+    border: #9c9c9c solid 1px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 20px 15px 20px 15px;
+     
+    margin: 30px 10px 546px 20px;
+}
+.caixa_nova_transacao{
+    align-self: center;
+}
+.novatra{
+    display: flex;
+    justify-content: center;
+    width: 370px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.caixa_tipo_transacao{
+    width: 94.8%;
+}
+.label_tipotransacao{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.seletor_compra_venda{
+    width: 100%;
+    height: 32px;
+    border: #9c9c9c solid 1px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 7px;
+}
+option{
+    font-size: 14px;
+}
+.caixa_nome_mercadoria{
+    width: 92.5%;
+}
+.merc_nome{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.merc_insere{
+    width: 100%;
+    height: 32px;
+    border: #9c9c9c solid 1px;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+    padding-left: 7px; 
+}
+.caixa_valor{
+    width: 92.5%;
+}
+.preco{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.insere_preco{
+    width: 100%;
+    height: 32px;
+    border: #9c9c9c solid 1px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 7px;
+}
+.caixa_btn{
+    margin-left: 10px;
+    width: 94.8%;
+}
+.btn_adc_transacao{
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(51, 51, 51, 1);
+}
+/* FIM CAIXA NOVA TRANSAÇÃO*/
+
+/*CAIXA EXTRATO TRANSAÇÃO*/
+.tab_transacao{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 19px 10px 0px 10px;
+    margin-top: 30px;
+}
+.extrato{
+    display: flex;
+    justify-content: center;
+}
+
+table #tab_merc{
+    width: 100%;
+}
+table #tab_merc2{
+    width: 100%;
+}
+
+th, td{
+    /* border-bottom: 1px solid black; */
+    padding: 7px;
+    text-align: left;
+}
+ 
+
+
+/*=======================================================================*/
+/*============================RODAPÉ=====================================*/
+/*=======================================================================*/
+.rodape{
+    height: 8px;
+    border: solid rgba(51, 51, 51, 1) 1px;
+    background-color: rgba(51, 51, 51, 1)
+}
+
+
+
+
+/*=======================================================================*/
+/*=================== MÉDIA SCREEN 1112 PX ==============================*/
+/*=======================================================================*/
+
+@media screen and (max-width:1112px) {
+
+    .conteudo{
+        width: 96%;
+    }
+     
+    .nova_transacao{
+        width: 36%;
+        margin-bottom: 360px;
+    }
+    .tab_transacao{
+        width: 59%;
+        padding-right: 0px;
+    }
+}
+
+
+
+/*=======================================================================*/
+/*=================== MÉDIA SCREEN 768 PX ===============================*/
+/*=======================================================================*/
+
+@media screen and (max-width:768px) {
+    .titulo{
+        justify-content: center;
+        /* margin-left: 27.5%; */
+        text-align: center;
+    }
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+    }
+     
+    .menu{
+        max-width: 252px;
+        margin: 0px;
+        align-items: flex-start;
+        color: rgba(224, 224, 224, 1)        
+    }
+
+    #check{
+        text-align-last: end;
+    }
+
+    .nav_principal{
+        top: 0px;
+        background-color: rgba(51, 51, 51,1);
+        width: 252px;
+        height: 995px;
+        right: 0px;
+        padding: 0px;
+        position: fixed;
+        transition: all .5s;
+    }
+    
+    .xis{
+        display: block;
+        margin-top: 20px;
+        margin-left: 20px;
+        position: fixed;   
+        z-index: 1; /*botao X 1 nivel acima do botao triplo_atomico*/
+    }
+   
+    .cross{
+        width: 16px;
+    }
+    .lista_menu{
+        top: 100px;
+        position: fixed;
+        width: 100%;
+        flex-direction: column; 
+    }
+
+    #check[type="checkbox"]:checked ~ nav{
+        transform: translateX(252px);
+    }
+    
+    .separador{
+        display: none;
+    }
+
+    li{ 
+        width: 100%;
+        text-align: right;
+    }
+
+    a:hover{
+        background-color:rgba(196, 196, 196, 1);
+        color:black;
+    }
+
+    a{  
+        width: 242px;            
+        text-decoration: none;
+        color: black;
+        padding: 20px 5px;
+        color: white;        
+    }
+    
+    .triplo_atomico img{
+        width: 24px;
+    }
+
+    .triplo_atomico{
+        display: block;
+        padding: 15px;
+        right: 0px;
+        position: relative;
+        z-index: 0;   /*triplo_atomico fica oculto pela nav_principal*/
+    }
+    .caixa_nova_transacao{
+        flex: 0 1 100%;
+        text-align: -webkit-center;
+    }
+    .caixa_tipo_transacao{
+        width: 19.5%;
+    }
+    .caixa_nome_mercadoria{
+        width: 45.3%;
+    }
+    .caixa_valor{
+        width: 19.5%;
+    }
+    .caixa_btn{
+        text-align: end;
+    }
+    .btn_adc_transacao{
+        text-align: end;
+        width: 26%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .nova_transacao{
+        flex-flow: row wrap;
+        width: 100%;
+        margin:10px;
+        justify-content: space-evenly;
+        padding: 20px 0px 0px 0px;
+        border-bottom: #9c9c9c solid 1px;
+    }
+    .tab_transacao{
+        width: 100%;
+        padding-right: 0px;
+    }
+     
+    .rodape{
+        margin-top: 427px;
+    }
+}
+/*=======================================================================*/
+/*=================== MÉDIA SCREEN 411 PX ===============================*/
+/*=======================================================================*/
+@media screen and (max-width:411px) {  
+    .titulo{
+        width: 255px;
+        margin-left: 6.5%;
+    }
+     
+    .tamanho_titulo{
+        width: 255px;
+    }
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_principal{
+        top: 0px;
+        background-color: rgba(51, 51, 51,1);
+        width: 351px;
+        height: 800px;
+        right: 0px;
+        position: fixed;
+        transition: all .5s;
+    }
+    .lista_menu{
+        top: 100px;
+        position: fixed;
+        width: 100%;
+        flex-direction: column; 
+        align-items: flex-end;       
+    }
+     
+    #check[type="checkbox"]:checked ~ nav
+    {
+        transform: translateX(351px);
+    }
+    .separador{
+        display: none;
+    }
+    a:hover{
+        background-color:rgba(196, 196, 196, 1);
+        color:black;
+    }
+    a{    
+        width: 341px;
+        text-decoration: none;
+        color: black;
+        padding: 20px 5px;
+        color: white;    
+    }
+    
+    .triplo_atomico img{
+        width: 24px;
+    }
+    .triplo_atomico{
+        display: block;
+        padding: 15px;
+        right: 0px;
+        position: fixed;
+        z-index: 0;
+         
+    }
+    .seletor_compra_venda{
+        margin-bottom: 0px;
+    }
+     .nova_transacao{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        height: 631px;
+        padding: 26px 0px 0px 0px;
+        border: 0px;
+        border-bottom: #9c9c9c solid 1px;
+    } 
+    .caixa_tipo_transacao{
+        width: 100%;
+    }
+    .caixa_nome_mercadoria{
+        width: 100%;
+    }
+    .caixa_valor{
+        width: 100%;
+    }
+    .btn_adc_transacao{
+        width: 100%;
+    }
+    .caixa_nova_transacao{
+        display: none;
+    }
+    .tab_transacao{
+        width: 371px;
+        height: 281px;
+        padding: 0px;
+        margin: 20px;
+    }
+    .merc_insere{
+        max-width: 371px;
+        padding-left: 7px;
+        margin-bottom: 0px;
+    }
+    .insere_preco{
+        max-width: 371px;
+        padding-left: 7px;
+        margin-bottom: 0px;
+    }
+    .triplo_atomico{
+        display: block;
+        padding: 15px;
+        right: 0px;
+        position: fixed;
+        z-index: 0;/*tripo_atomico fica oculto pela nav_principal*/
+    }
+    .xis{
+        z-index: 1;/* botao X 1 nivel acima do botao tripo_atomico*/
+    }
+    .btn_adc_transacao{
+        margin-bottom: 0px;
+    }
+    .rodape{
+        margin-top: 5px;
+    }
+
+}
+
 
